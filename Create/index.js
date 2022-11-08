@@ -15,6 +15,6 @@ createAccForm.addEventListener('submit', e=>{
     .catch(err => console.log(err));
     createdLabel.innerHTML = "Account Created Successfully Redirecting in 5 seconds";
     setTimeout(()=>{
-        window.open("/log-in-system/index.html")
+        window.location.href ="https://melosshabi.github.io/log-in-system/index.html";
     }, 5000);
 })

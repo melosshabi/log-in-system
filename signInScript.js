@@ -22,7 +22,7 @@ signInForm.addEventListener('submit', e =>{
                 localStorage.setItem("email", email);
                 localStorage.setItem('password', password);
                 localStorage.setItem('id', id);
-                window.open('https://melosshabi.github.io/log-in-system/Manage/index.html');
+                window.location.href ="https://melosshabi.github.io/log-in-system/Manage/index.html";
             }
             if(username != users[i].username || password != users[i].password){
                 incorrectCreds.innerHTML = "Incorrect username or password";
