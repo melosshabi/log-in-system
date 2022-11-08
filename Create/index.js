@@ -11,7 +11,6 @@ createAccForm.addEventListener('submit', e=>{
         method:'POST',
         body:usrData,
     }).then(res => res.json())
-    .then(data => console.log(data))
     .catch(err => console.log(err));
     createdLabel.innerHTML = "Account Created Successfully Redirecting in 5 seconds";
     setTimeout(()=>{

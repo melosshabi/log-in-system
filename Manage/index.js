@@ -87,7 +87,7 @@
             }
         })
         alert("Your Data was updated succsessfully. Page will reload in 5 Seconds")
-        setTimeout(()=>{ window.reload()}, 5000)
+        setTimeout(()=>{ window.location.reload()}, 5000)
     })
     
 })
