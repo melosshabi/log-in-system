@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(31,29,44);
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    height: 90%;
+    width: 90%;
+    border-radius: 25px;
+    background-color: rgb(38,40,55);
+    color:white;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    position:relative;
+}
+.container div:nth-child(1) {
+    margin-bottom: 50px;
+    margin-right: 15%;
+    width: 35rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container div:nth-child(2){
+    margin-right: 15%;
+    width: 35rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container div:nth-child(1) label {
+    font-size: 1.6rem;
+
+}
+.container div:nth-child(2) label{
+    font-size: 1.6rem;
+}
+
+.username-input, .password-input{
+    font-size: 1.4rem;
+    background-color: rgb(60,62,75);
+    border:none;
+    border-radius: 15px;
+    color:white;
+    padding:10px 20px;
+    outline:1px solid white;
+}
+
+.button-div{
+    position: absolute;
+    bottom:5%;
+}
+
+.reset-btn{
+    color:white;
+    background:rgb(31,29,44);
+    border:none;
+    border-radius: 20px;
+    font-size: 2rem;
+    padding:10px 55px;
+    box-shadow:3px 3px 5px black;
+    cursor:pointer;
+   
+}
+.incorrect{
+    color:red
+}
+
+@media (max-width:412px) {
+    body{
+        overflow: hidden;
+    }
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .container div:nth-child(1){
+        width: 19rem;
+        margin-left: 15%;
+        padding:0;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 25%;
+    }
+    .container div:nth-child(2){
+        width: 19rem;
+        margin:0;
+        padding:0;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+    .container div:nth-child(1) label{
+      font-size: 1rem;
+    }
+    .container div:nth-child(2) label{
+        font-size: 1rem;
+    }
+   
+    .username-input, .password-input{
+        font-size: 1rem;
+        padding: 5px 5px;
+    }
+    .reset-btn{
+        font-size: 1rem;
+    }
+}
+@media (max-height:400px){
+    .container div:nth-child(1){
+        margin-bottom: 5%;
+    }
+
+}

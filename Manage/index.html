@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script defer type="module" src="index.js"></script>
+    <title>Manage Account</title>
+</head>
+<body>
+    <div class="spinner-container">
+        <div class="spinner"></div>
+    </div>
+
+    <div class="page-content">
+        <div class="sidebar">
+            <h3 class="users-name"></h3>
+            <p class="users-email"></p>
+            <p>Menu</p>
+
+            <div class="options">             
+                <ul>
+                    <li><svg class="settings-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg><button class="settings-btn">Settings</button></li>
+                </ul>
+            </div>
+            <div class="logout-div">
+                <ul>
+                    <li><svg class="logout-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg><button onclick=logOut() class="logout-btn">Log out</button></li>
+                </ul>
+            </div>
+        </div>
+        <div class="user-info">
+            <h1>Account Settings</h1>
+
+            <hr>
+            <h2>Personal Information</h2>
+            <div class="user-data">
+                <div class="username-div">
+                    <label class="username-label">Username</label><br/><input class="username" type="text"/>
+                    <button class="change-username ">Change Username</button>
+                </div>
+                <div class="email-div">
+                    <label>E-mail</label><br/><input class="email" type="text"/>
+                    <button class="change-email disabled">Change Email</button>
+                </div>
+                <div class="password-div">
+                    <label>Password</label><br><input type="password" class="password">
+                    <button class="change-password disabled">Change Password</button>
+                </div>
+            </div>
+
+            <div class="btn-div">
+                <button class="save-changes">Save Changes</button>
+            </div>
+        </div>
+        <div class="logout-div-mobile">
+            <ul>
+                <li><button onclick=logOut() class="logout-btn-mobile">Log out</button></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+         function logOut(){
+        localStorage.removeItem('username');
+        localStorage.removeItem('email');
+        localStorage.removeItem('password');
+        localStorage.removeItem('id');
+        window.open('log-in-system/index.html')
+    }
+       
+    </script>
+</body>
+</html>
