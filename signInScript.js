@@ -10,7 +10,7 @@ signInForm.addEventListener('submit', e =>{
      username = document.getElementsByClassName('username-field')[0].value;
      password = document.getElementsByClassName('password-field')[0].value;
 
-    fetch('https://mela-json-server.herokuapp.com/users')
+    fetch('https://mela-users.onrender.com/users')
     .then(res => res.json())
     .then(data =>{
         let users = [...data];

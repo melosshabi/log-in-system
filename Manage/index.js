@@ -68,13 +68,13 @@
         passwordField.type = "password";
       
 
-        fetch('https://mela-json-server.herokuapp.com/users')
+        fetch('https://mela-users.onrender.com/users')
         .then(res => res.json())
         .then(data => {
             let users = [...data];
             for(let i = 0; i < users.length; i++){
                 if(id == users[i].id){
-                    fetch(`https://mela-json-server.herokuapp.com/users/${id}`,{
+                    fetch(`https://mela-users.onrender.com/users/${id}`,{
                         method:'PATCH',
                         body:JSON.stringify({
                             username:updatedUsername,
@@ -86,8 +86,7 @@
                 }
             }
         })
-        alert("Your Data was updated succsessfully. Page will reload in 5 Seconds")
-        setTimeout(()=>{ window.location.reload()}, 5000)
+        alert("Your Data was updated succsessfully. Page will reload in 3 Seconds")
+        setTimeout(()=>{ window.location.reload()}, 3000)
     })
-    
 })
