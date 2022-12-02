@@ -13,8 +13,8 @@ createAccForm.addEventListener('submit', e=>{
     }).then(res => res.json())
     .then(data => console.log(data))
     .catch(err => console.log(err));
-    createdLabel.innerHTML = "Account Created Successfully Redirecting in 5 seconds";
+    createdLabel.innerHTML = "Account Created Successfully Redirecting";
     setTimeout(()=>{
         window.location.href ="https://melosshabi.github.io/log-in-system/index.html";
-    }, 5000);
+    }, 2000);
 })
