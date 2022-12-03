@@ -21,7 +21,8 @@ signInForm.addEventListener('submit', e =>{
                 localStorage.setItem("email", email);
                 localStorage.setItem('password', password);
                 localStorage.setItem('id', id);
-                window.location.href ="https://melosshabi.github.io/log-in-system/Manage/index.html";
+                setTimeout(()=>{window.location.href ="https://melosshabi.github.io/log-in-system/Manage/index.html";}, 2000)
+                
             }
             if(username != users[i].username || password != users[i].password){
                 incorrectCreds.innerHTML = "Incorrect username or password";
