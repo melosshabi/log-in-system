@@ -1,14 +1,13 @@
 let signInForm = document.getElementsByClassName("sign-in-form")[0];
-let incorrectCreds = document.getElementsByClassName("incorrect-credentials")[0];
-
+let incorrectCreds = document.getElementsByClassName("incorrect")[0];
 let username;
 let email;
 let password;
 let id;
 signInForm.addEventListener('submit', e =>{
     e.preventDefault();
-     username = document.getElementsByClassName('username-field')[0].value;
-     password = document.getElementsByClassName('password-field')[0].value;
+     username = document.getElementsByClassName('username')[0].value;
+     password = document.getElementsByClassName('password')[0].value;
 
     fetch('https://mela-users.onrender.com/users')
     .then(res => res.json())
