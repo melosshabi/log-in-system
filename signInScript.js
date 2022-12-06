@@ -1,9 +1,20 @@
 let signInForm = document.getElementsByClassName("sign-in-form")[0];
 let incorrectCreds = document.getElementsByClassName("incorrect")[0];
+let passwordField = document.getElementsByClassName('password')[0];
+let showPassBtn = document.getElementsByClassName('showPassBtn')[0];
 let username;
 let email;
 let password;
 let id;
+
+showPassBtn.addEventListener('click', ()=>{
+    if(passwordField.type == "password"){
+        passwordField.type = "text";
+    }else{
+        passwordField.type = "password";
+    }
+})
+
 signInForm.addEventListener('submit', e =>{
     e.preventDefault();
      username = document.getElementsByClassName('username')[0].value;
@@ -21,11 +32,12 @@ signInForm.addEventListener('submit', e =>{
                 localStorage.setItem("email", email);
                 localStorage.setItem('password', password);
                 localStorage.setItem('id', id);
-                setTimeout(()=>{window.location.href ="https://melosshabi.github.io/log-in-system/Manage/index.html";}, 2000)
-                
+                window.location.href ="https://melosshabi.github.io/log-in-system/Manage/index.html";
+                break;
             }
             if(username != users[i].username || password != users[i].password){
                 incorrectCreds.innerHTML = "Incorrect username or password";
+                break;
             }
         }
     })

@@ -2,7 +2,7 @@
     let spinner = document.getElementsByClassName('spinner-container')[0];
     setTimeout(()=>{
         spinner.style.display = "none";
-    }, 1000)
+    }, 1500)
 
     if(localStorage.length == 0){
         window.location.replace('../index.html');
@@ -86,7 +86,7 @@
                 }
             }
         })
-        alert("Your Data was updated succsessfully. Page will reload in 3 Seconds")
-        setTimeout(()=>{ window.location.reload()}, 3000)
+        alert("Your Data was updated succsessfully. Reloading");
+        window.location.reload();
     })
 })
