@@ -35,10 +35,13 @@ signInForm.addEventListener('submit', e =>{
                 window.location.href ="https://melosshabi.github.io/log-in-system/Manage/index.html";
                 break;
             }
-            if(username != users[i].username || password != users[i].password){
-                incorrectCreds.innerHTML = "Incorrect username or password";
-                // break;
+            if(i === users.length - 1){
+                if(username != users[i].username || password != users[i].password){
+                    incorrectCreds.innerHTML = "Incorrect username or password";
+                    // break;
+                }
             }
+            
         }
     })
 })
