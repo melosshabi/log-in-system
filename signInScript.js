@@ -37,7 +37,7 @@ signInForm.addEventListener('submit', e =>{
             }
             if(username != users[i].username || password != users[i].password){
                 incorrectCreds.innerHTML = "Incorrect username or password";
-                break;
+                // break;
             }
         }
     })
