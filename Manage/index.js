@@ -1,4 +1,4 @@
-    window.addEventListener('load', ()=>{
+    window.addEventListener('load', async ()=>{
     let spinner = document.getElementsByClassName('spinner-container')[0];
     setTimeout(()=>{
         spinner.style.display = "none";
@@ -82,11 +82,13 @@
                             password:updatedPassword
                         }),
                         headers:{'Content-Type':'application/json; charset=UTF-8',}
+                    }).then(() => {
+                        alert("Your Data was updated succsessfully. Reloading");
+                        window.location.reload();
                     })
                 }
             }
         })
-        alert("Your Data was updated succsessfully. Reloading");
-        window.location.reload();
+        
     })
 })
